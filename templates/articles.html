@@ -1,0 +1,6 @@
+{% for article in articles %}
+    <a href="/articles/{{ article.pk }}/">{{ article.headline }}</a><br>
+        {% if article.image %}
+        <img src="{{ article.image.url }}" alt=""><br>
+        {% endif %}
+{% endfor %}
