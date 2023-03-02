@@ -7,9 +7,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", article_list),
-    path("articles/<pk>/", article_retrieve),
-    path("add_article", article_create),
+    path("", article_list, name="article_list"),
+    path("articles/<pk>/", article_retrieve, name="article_retrieve"),
+    path("add_article", article_create, name="article_create"),
     path("articles/<pk>/edit/", article_update),
     path("articles/<pk>/delete/", article_delete),
 ]

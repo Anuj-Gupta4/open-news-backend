@@ -1,6 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br><br><br><br>
+
 <h2>{{ articles.headline }}</h2>
 {{ articles.byline }}
 <p>Picture: <br><img src="{{ articles.image.url }}" alt=""></p>
 <p>{{ articles.introduction }}</p>
 <p>{{ articles.body }}</p>
 <p>{{ articles.conclusion }}</p>
+
+<div>
+    <a href="/articles/{{ articles.id }}/edit/" class="">
+        Edit</a>
+    <a href="/articles/{{ articles.id }}/delete/" class="">
+        Delete</a>
+</div>
+
+{% endblock content %}

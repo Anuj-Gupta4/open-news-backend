@@ -7,8 +7,66 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        header img {
+            height: 60px;
+            margin-left: 60px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        header {
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 25px 0 black;
+        }
+
+        header * {
+            display: inline;
+        }
+
+        header li {
+            margin: 20px;
+        }
+
+        header li a {
+            color: black !important;
+        }
+
+        header li a:hover{
+            color: rgb(38, 32, 126) !important;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <header>
+        <a href="/"><img src="https://cdn-icons-png.flaticon.com/512/21/21601.png?w=740&t=st=1677735800~exp=1677736400~hmac=5d1ff29d916fa64a0b3ec0e7dea923ab3195e699e44ecfd0d6c84b306ea7e9ad"></a>
+        <nav>
+          <ul>
+            <li>
+              <a href="{% url 'article_list' %}">Articles</a>
+            </li>
+            <li>
+              <a href="{% url 'article_create' %}">Create</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <div class="mx-auto max-w-5xl px-20 py-4">
+
+    {% block content %}
+    {% endblock content %}
 </body>
 </html>

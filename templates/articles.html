@@ -1,6 +1,17 @@
-{% for article in articles %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<br><br><br><br><br><br>
+
+<center>
+    {% for article in articles %}
     <a href="/articles/{{ article.pk }}/">{{ article.headline }}</a><br>
         {% if article.image %}
         <img src="{{ article.image.url }}" alt=""><br>
         {% endif %}
-{% endfor %}
+        <br>
+    {% endfor %}    
+</center>
+
+{% endblock content %}
