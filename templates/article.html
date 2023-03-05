@@ -4,12 +4,18 @@
 
 <br><br><br><br>
 
-<h2>{{ articles.headline }}</h2>
-{{ articles.byline }}
+<h2 class="text-center text-3xl">{{ articles.headline }}</h2>
+<br>
+<strong>{{ articles.byline }}</strong>
+<br><br>
 <p>Picture: <br><img src="{{ articles.image.url }}" alt=""></p>
+<br>
 <p>{{ articles.introduction }}</p>
+<br>
 <p>{{ articles.body }}</p>
+<br>
 <p>{{ articles.conclusion }}</p>
+<br><br>
 
 <div>
     <a href="/articles/{{ articles.id }}/edit/" class="">
